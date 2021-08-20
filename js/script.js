@@ -15,7 +15,7 @@ function follow(e){
     gsap.to(cursor, {duration: .3, left: e.pageX - circle.width/2, top: e.pageY - circle.height/2});
 }
 
-document.addEventListener("mousemove", follow);
+document.addEventListener("touchmove", follow);
 
 // TODO : 카운트 다운
 const count = document.querySelector('.count');

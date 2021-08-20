@@ -1,0 +1,77 @@
+*{padding: 0; margin: 0; box-sizing: border-box; cursor: none;}
+
+body{
+    background: url(./img/1.jpg) no-repeat center center;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+}
+
+.bg{
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+    width: 100%; height: 100vh;
+    transition: 0.5s ease-in-out;
+}
+
+.text{
+    color: #fff; 
+    display: flex; 
+    flex-direction: column;
+    width: 100%; height: 100vh;
+    justify-content: center; align-items: center;
+    font-family: 'Gugi', cursive;
+}
+
+.text p{
+    font-size: 60px;
+    line-height: 2;
+}
+
+.text input{
+    width: 20%; height: 5%; 
+    border: none; 
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    cursor: pointer;
+}
+
+.reset{
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+    width: 60px; height: 60px;
+    cursor: pointer !important;
+}
+.reset img{
+    width: 100%; height: 100%;
+}
+
+.count{
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Rampart One', cursive;
+    font-style: italic;
+}
+
+.cursor{
+    position: absolute;
+    width: 10vh; height: 10vh;
+    background: url(./img/1.jpg) no-repeat center center fixed;
+    overflow: hidden;
+    background-size: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    top: 0; left: 0;
+    z-index: -1;
+}
+
+/*반응형*/
