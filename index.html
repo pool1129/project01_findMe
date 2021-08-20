@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Me</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg"></div>
+
+    <div class="text">
+        <p>나는 누구일까요?</p>
+        <input type="text" placeholder="정답을 입력해 주세요!">
+    </div>
+
+    <span class="reset">
+        <img src="img/outline_restart_alt_white_24dp.png" alt="">
+    </span>
+    <span class="count">10</span>
+
+    <div class="cursor"></div>
+
+    <style>
+        *{padding: 0; margin: 0; box-sizing: border-box; cursor: none;}
+
+        body{
+            background: url(./img/1.jpg) no-repeat center center;
+            height: 100vh;
+            background-size: cover;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .bg{
+            background-color: rgba(0, 0, 0, 1);
+            position: absolute;
+            top: 0; left: 0;
+            z-index: -1;
+            width: 100%; height: 100vh;
+            transition: 0.5s ease-in-out;
+        }
+
+        .text{
+            color: #fff; 
+            display: flex; 
+            flex-direction: column;
+            width: 100%; height: 100vh;
+            justify-content: center; align-items: center;
+            font-family: 'Gugi', cursive;
+        }
+
+        .text p{
+            font-size: 60px;
+            line-height: 2;
+        }
+
+        .text input{
+            width: 20%; height: 5%; 
+            border: none; 
+            outline: none;
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Nanum Gothic', sans-serif;
+            cursor: pointer;
+        }
+
+        .reset{
+            position: absolute;
+            left: 2%;
+            bottom: 2%;
+            width: 60px; height: 60px;
+            cursor: pointer !important;
+        }
+        .reset img{
+            width: 100%; height: 100%;
+        }
+
+        .count{
+            position: absolute;
+            bottom: 2%;
+            right: 2%;
+            color: #fff;
+            font-size: 50px;
+            font-family: 'Rampart One', cursive;
+            font-style: italic;
+        }
+
+        .cursor{
+            position: absolute;
+            width: 10vh; height: 10vh;
+            background: url(./img/1.jpg) no-repeat center center fixed;
+            overflow: hidden;
+            background-size: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            top: 0; left: 0;
+            z-index: -1;
+        }
+    </style>
+
+    <script src="js/data.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
