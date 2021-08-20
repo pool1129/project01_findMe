@@ -15,7 +15,9 @@ function follow(e){
     gsap.to(cursor, {duration: .3, left: e.pageX - circle.width/2, top: e.pageY - circle.height/2});
 }
 
+document.addEventListener("mousemove", follow);
 document.addEventListener("touchmove", follow);
+
 
 // TODO : 카운트 다운
 const count = document.querySelector('.count');
@@ -75,8 +77,8 @@ function inputCheck(e){
             // console.log('오답');
             input.value = null;
             txt.innerHTML = '다시 해볼까요?';
-            cursor.style.width = '20vh'; 
-            cursor.style.height = '20vh';
+            cursor.style.width = '30vh'; 
+            cursor.style.height = '30vh';
         }
 
         return false;
